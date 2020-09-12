@@ -293,7 +293,7 @@ void RenderEmptyTab()
 
 	ImGui::BeginGroupBox("##body_content");
 	{
-		auto message = "There's nothing here. Add something you want!";
+		auto message = "Add something you want!";
 
 		 auto pos = ImGui::GetCurrentWindow()->Pos;
 		 auto wsize = ImGui::GetCurrentWindow()->Size;
@@ -324,6 +324,8 @@ void RenderConfigTab()
 		if (ImGui::Button("Load cfg")) {
 			Config::Get().Load();
 		}
+	    
+		 pos = pos + wsize / 2.0f;
     }
     ImGui::EndGroupBox();
 }
